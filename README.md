@@ -1,11 +1,13 @@
-Forge V0.16
+FORGE V0.16 DEPLOYMENT
 
-Versioned source filenames:
-- index_v0_16.html
-- manifest_v0_16.json
-- sw_v0_16.js
+GitHub Pages MUST have index.html at the repository root. Do not delete/rename it to index_v0_16.html for deployment.
 
-The HTML references the versioned manifest and service worker filenames so the three files cannot be confused with files from another Forge version.
+Files included:
+- index.html          -> required GitHub Pages entry point (same V0.16 app as index_v0_16.html)
+- index_v0_16.html    -> version-labelled copy for identification
+- manifest_v0_16.json -> version-labelled PWA manifest
+- sw_v0_16.js         -> version-labelled service worker
 
-GitHub Pages note:
-GitHub Pages serves index.html automatically at the site root. If deploying these files directly to the root of a GitHub Pages site, rename index_v0_16.html to index.html after replacing the previous version. The manifest and service-worker files can remain versioned as named here.
+The index.html registers sw_v0_16.js and references manifest_v0_16.json.
+
+IMPORTANT: Replace the existing index.html in the repository. If an old V0.15 index.html remains in the repository and the V0.16 index is only present as index_v0_16.html, GitHub Pages will continue to serve V0.15.
