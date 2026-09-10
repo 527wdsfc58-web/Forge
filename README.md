@@ -1,13 +1,7 @@
-FORGE V0.16 DEPLOYMENT
+Forge V0.17
 
-GitHub Pages MUST have index.html at the repository root. Do not delete/rename it to index_v0_16.html for deployment.
-
-Files included:
-- index.html          -> required GitHub Pages entry point (same V0.16 app as index_v0_16.html)
-- index_v0_16.html    -> version-labelled copy for identification
-- manifest_v0_16.json -> version-labelled PWA manifest
-- sw_v0_16.js         -> version-labelled service worker
-
-The index.html registers sw_v0_16.js and references manifest_v0_16.json.
-
-IMPORTANT: Replace the existing index.html in the repository. If an old V0.15 index.html remains in the repository and the V0.16 index is only present as index_v0_16.html, GitHub Pages will continue to serve V0.15.
+Changes from V0.16:
+- Workouts list is now sorted alphabetically by workout name, case-insensitive.
+- Filtered workout lists retain alphabetical ordering.
+- GitHub Pages deployment uses index.html at repository root.
+- Version-labelled copies: index_v0_17.html, manifest_v0_17.json, sw_v0_17.js.
