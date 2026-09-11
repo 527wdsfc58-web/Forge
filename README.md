@@ -1,7 +1,5 @@
-Forge V0.17
+# Forge V0.18 — GitHub Pages
 
-Changes from V0.16:
-- Workouts list is now sorted alphabetically by workout name, case-insensitive.
-- Filtered workout lists retain alphabetical ordering.
-- GitHub Pages deployment uses index.html at repository root.
-- Version-labelled copies: index_v0_17.html, manifest_v0_17.json, sw_v0_17.js.
+Upload the contents of this folder to the branch/folder used by GitHub Pages.
+
+Important: `index.html` must remain at the top level of the published source.
