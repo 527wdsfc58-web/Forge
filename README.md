@@ -1,8 +1,8 @@
-Forge V0.21
+Forge V0.22
 GitHub Pages deployment package.
 Keep index.html at the root of the selected Pages source.
 
-V0.21 content release:
+V0.22 content release:
 - Adds 100 new non-mobility workouts: 25 Strength, 20 AMRAP, 15 EMOM, 30 Conditioning/Circuit and 10 Run.
 - Adds simple soccer-oriented exercises: Shuttle Run, 10m Sprint, Lateral Shuffle and Skater Hops.
 - Automatically creates a 3-month training plan starting on the next Monday after installation/update.
