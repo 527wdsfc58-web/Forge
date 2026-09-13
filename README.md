@@ -1,7 +1,7 @@
-# Forge v0.24
+# Forge v0.25
 
 GitHub Pages deployment package.
 
-Upload the contents of this folder to the root of the GitHub Pages branch/repository. Keep `index.html`, `manifest_v0_24.json`, and `sw_v0_24.js` together.
+Upload the contents of this folder to the root of the GitHub Pages branch/repository. Keep `index.html`, `manifest_v0_25.json`, and `sw_v0_25.js` together.
 
-This release adds a dedicated Mobility function with 50 mobility sessions and per-set timers, contextual workout/exercise history on the Start Workout screen, dual Workout + Mobility daily planning, and Week/Month Plan views. Existing saved workout/session data is migrated forward without destructive reset.
+This release combines the Workout and Mobility libraries into a single searchable, filterable Workouts screen, fixes Mobility opening/editing, and corrects Mobility timer Reset so it stops at the original configured duration. Existing workout and mobility content, execution functionality, history, scheduling, and localStorage data are preserved.
