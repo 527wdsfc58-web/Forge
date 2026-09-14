@@ -1,7 +1,9 @@
-# Forge v0.27
+# Forge v0.28
 
 GitHub Pages deployment package.
 
-Upload the contents of this folder to the root of the GitHub Pages branch/repository. Keep `index.html`, `manifest_v0_27.json`, and `sw_v0_27.js` together.
+Upload the contents of this folder to the root of the GitHub Pages branch/repository. Keep `index.html`, `manifest_v0_28.json`, and `sw_v0_28.js` together.
 
-This release is a cache/deployment fix based on Forge v0.26. The application functionality and stored workout/Mobility data architecture are unchanged. The service worker uses the `/Forge/`-safe relative registration path, a network-first fetch strategy, a versioned v0.27 cache, immediate activation/control, and removal of older Forge caches.
+This release incrementally updates Forge v0.27 with completed-workout editing, floating rest timer controls, workout timer pause/resume/reset, sorted Plan Mobility selection, Random Mobility selection, Today completion status, and the five-section Progress experience with benchmark and measurement history. Existing workouts, Mobility sessions, history, schedules, profile/goals and localStorage data are preserved.
+
+The service worker retains the V0.27 network-first/cache-busting architecture and uses only V0.28 assets.
