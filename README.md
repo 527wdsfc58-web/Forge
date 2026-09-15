@@ -1,4 +1,4 @@
-Forge V0.32
+Forge V0.37
 
 Incremental AMRAP workout execution update from V0.31. Strength, Circuit, EMOM and Run execution are unchanged.
 
