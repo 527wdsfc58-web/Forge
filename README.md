@@ -1,15 +1,19 @@
-# Forge V0.32
+# Forge V0.33
 
-Workout Engine V2 refactor built incrementally from Forge V0.31.
+Bug-fix release based directly on Forge V0.32.
 
-- Strength keeps the existing exercise/set execution model.
-- Circuit uses Circuit → Round → Exercise with round completion tracking.
-- AMRAP uses a countdown, full-round counter and partial-exercise tracking.
-- EMOM uses minute-driven automatic progression and supports repeating or variable minute configurations.
-- For Time is a new workout type with an elapsed completion timer.
-- Existing Circuit/AMRAP/EMOM workouts are interpreted through backwards-compatible legacy adapters; saved data is not migrated just to fit the new model.
-- Mobility, Today, Plan, Progress, Profile, history and existing localStorage structures are preserved.
-- The existing editable Rest timer remains separate from workout timing.
-- Service worker/cache is versioned as forge-v0.32 and uses the existing network-first/cache-busting approach.
+## Fixes
+- Restored Strength/legacy workout execution renderer required by the V2 execution engine.
+- Restored active-workout exit handling.
+- Restored builder metric-change handling.
+- V2 execution screens render their initial state immediately.
+- EMOM now saves/completes automatically when the final minute expires.
+- Completed normal workouts can be deleted directly from the Plan day view.
+- Deleting a completed workout removes only the completed session; the scheduled workout remains planned.
 
-Deploy the four files at the root of the ZIP to GitHub Pages.
+## Deployment
+Required GitHub Pages root files:
+- index.html
+- manifest_v0_33.json
+- sw_v0_33.js
+- README.md
