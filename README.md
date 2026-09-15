@@ -1,9 +1,5 @@
-# Forge V0.31
+Forge V0.32
 
-Progress screen refinements:
-- Smaller Progress section action buttons.
-- Action labels simplified to History / Update / Start test.
-- 5K is now manually updated from an external running app rather than started inside Forge.
-- Strength benchmark is now four lifts, one set of 5 reps each.
+Incremental AMRAP workout execution update from V0.31. Strength, Circuit, EMOM and Run execution are unchanged.
 
-Deploy the four files at the root of the ZIP to GitHub Pages.
+AMRAP changes: countdown timer based on workout duration, single visible round, existing exercise completion ticks, Complete round action, and final results showing full rounds plus partial exercises.
