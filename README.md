@@ -17,3 +17,5 @@ Circuit workout UI update built on the confirmed-working V0.37 baseline.
 - Manifest: manifest_v0_38.json
 - Service worker: sw_v0_38.js
 - Cache: forge-v0.38
+
+- Circuit workouts now support a targeted number of rounds with a visual round tracker; completing the final target round automatically completes the workout. Existing circuits without an explicit round target derive it from their existing exercise set counts.
