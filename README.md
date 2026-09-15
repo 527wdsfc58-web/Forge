@@ -1,4 +1,4 @@
-# Forge V0.38
+# Forge V0.39
 
 Circuit workout UI update built on the confirmed-working V0.37 baseline.
 
@@ -13,9 +13,12 @@ Circuit workout UI update built on the confirmed-working V0.37 baseline.
 - Existing localStorage data and workout IDs are preserved.
 
 ## Versioning
-- Visible version: v0.38
-- Manifest: manifest_v0_38.json
-- Service worker: sw_v0_38.js
-- Cache: forge-v0.38
+- Visible version: v0.39
+- Manifest: manifest_v0_39.json
+- Service worker: sw_v0_39.js
+- Cache: forge-v0.39
 
 - Circuit workouts now support a targeted number of rounds with a visual round tracker; completing the final target round automatically completes the workout. Existing circuits without an explicit round target derive it from their existing exercise set counts.
+
+- EMOM execution updated to a minute-driven tracker: one minute per exercise occurrence, automatic minute advancement, pause/resume/reset, progress tracking, and completion history.
+- AMRAP/Circuit no-previous-result text removed; the existing empty state remains visual.
