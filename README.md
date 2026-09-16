@@ -1,25 +1,26 @@
-# Forge V0.41 — Multi-Profile Support
+# Forge V0.42 — Strength Progressive Overload
 
-Built on the confirmed-working V0.40 EMOM baseline.
+Built on the confirmed-working V0.41 multi-profile baseline.
 
-## Multi-profile architecture
-- Four initial profiles: Mitch, Profile 2, Profile 3, Profile 4.
-- Stable profile IDs are separate from editable profile names.
-- `activeProfileId` persists across navigation, refresh and PWA reopen.
-- Profile-specific: goals, measurements/progress, plan/calendar, sessions/history and streaks derived from sessions.
-- Shared: workout definitions, exercise library, Mobility definitions and saved/shared workout catalogue.
-- Existing V0.40 personal data is migrated automatically into Profile 1 (Mitch) once, with an idempotent migration marker.
-- Legacy storage keys are retained as a safety backup but are no longer the active data source after migration.
-- Profile switching is blocked while an active workout is open so an in-progress session cannot be attributed to another profile.
-- Profile names can be edited without changing profile IDs or personal data.
+## Strength progression
+- Double progression is available for Strength exercises only.
+- Built-in progressive strength exercises use centrally maintained defaults.
+- Custom Strength exercises can configure minimum reps, maximum reps, progression type and weight increment.
+- Progression targets are stored separately from actual completed workout results.
+- The first completed result establishes the next target when no prior progression state exists.
+- Successful targets increase reps within the configured range; reaching the maximum for every set increases weight and resets reps to the minimum.
+- Failed targets are held for another attempt. Manual weight changes are retained as the working weight rather than silently reverting.
+- Progression is isolated by profile and workout/exercise context.
+- Configuration changes use a configuration signature so old progression state does not override newly changed exercise settings.
 
-## UI
-- Profile screen header is now the profile selector.
-- Active profile name is shown in the main header without adding a new navigation item.
-- Blank profiles use the existing empty-state patterns.
+## History and compatibility
+- Existing completed workout records are preserved.
+- Existing strength history can establish a baseline when sufficient completed reps/weight data exists.
+- Existing exercises without a progressive configuration remain non-progressive.
+- AMRAP, EMOM, Circuit, Run/Conditioning and Mobility behaviour is unchanged.
 
 ## Versioning
-- Visible version: v0.41
-- Manifest: manifest_v0_41.json
-- Service worker: sw_v0_41.js
-- Cache: forge-v0.41
+- Visible version: v0.42
+- Manifest: manifest_v0_42.json
+- Service worker: sw_v0_42.js
+- Cache: forge-v0.42
