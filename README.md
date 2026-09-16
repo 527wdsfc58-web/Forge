@@ -1,24 +1,25 @@
-# Forge V0.39
+# Forge V0.41 — Multi-Profile Support
 
-Circuit workout UI update built on the confirmed-working V0.37 baseline.
+Built on the confirmed-working V0.40 EMOM baseline.
 
-## Circuit active workout
-- Count-up workout timer using the existing Forge timer.
-- Displays one circuit round at a time.
-- Reuses existing exercise cards and completion checkboxes.
-- Complete round button requires every exercise to be completed.
-- Completing a round clears the exercise boxes and advances the round counter.
-- Records full rounds plus exercises completed in a partial round.
-- Existing Strength, AMRAP, EMOM and Run execution paths are otherwise unchanged.
-- Existing localStorage data and workout IDs are preserved.
+## Multi-profile architecture
+- Four initial profiles: Mitch, Profile 2, Profile 3, Profile 4.
+- Stable profile IDs are separate from editable profile names.
+- `activeProfileId` persists across navigation, refresh and PWA reopen.
+- Profile-specific: goals, measurements/progress, plan/calendar, sessions/history and streaks derived from sessions.
+- Shared: workout definitions, exercise library, Mobility definitions and saved/shared workout catalogue.
+- Existing V0.40 personal data is migrated automatically into Profile 1 (Mitch) once, with an idempotent migration marker.
+- Legacy storage keys are retained as a safety backup but are no longer the active data source after migration.
+- Profile switching is blocked while an active workout is open so an in-progress session cannot be attributed to another profile.
+- Profile names can be edited without changing profile IDs or personal data.
+
+## UI
+- Profile screen header is now the profile selector.
+- Active profile name is shown in the main header without adding a new navigation item.
+- Blank profiles use the existing empty-state patterns.
 
 ## Versioning
-- Visible version: v0.39
-- Manifest: manifest_v0_39.json
-- Service worker: sw_v0_39.js
-- Cache: forge-v0.39
-
-- Circuit workouts now support a targeted number of rounds with a visual round tracker; completing the final target round automatically completes the workout. Existing circuits without an explicit round target derive it from their existing exercise set counts.
-
-- EMOM execution updated to a minute-driven tracker: one minute per exercise occurrence, automatic minute advancement, pause/resume/reset, progress tracking, and completion history.
-- AMRAP/Circuit no-previous-result text removed; the existing empty state remains visual.
+- Visible version: v0.41
+- Manifest: manifest_v0_41.json
+- Service worker: sw_v0_41.js
+- Cache: forge-v0.41
