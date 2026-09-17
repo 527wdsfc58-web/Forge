@@ -1,4 +1,4 @@
-# Forge V0.43 — Strength Progressive Overload
+# Forge V0.44 — Strength Progressive Overload
 
 Built on the confirmed-working V0.41 multi-profile baseline.
 
@@ -20,10 +20,10 @@ Built on the confirmed-working V0.41 multi-profile baseline.
 - AMRAP, EMOM, Circuit, Run/Conditioning and Mobility behaviour is unchanged.
 
 ## Versioning
-- Visible version: v0.43
+- Visible version: v0.44
 - Manifest: manifest_v0_42.json
 - Service worker: sw_v0_42.js
-- Cache: forge-v0.43
+- Cache: forge-v0.44
 
 
-V0.43 bug fix: restored the standard strength/normal workout tracking renderer removed during V0.42 progression integration, and added progression-target prefill to that renderer.
+V0.44 bug fix: restored the standard strength/normal workout tracking renderer removed during V0.42 progression integration, and added progression-target prefill to that renderer.
