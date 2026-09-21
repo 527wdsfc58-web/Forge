@@ -1,29 +1,24 @@
-# Forge V0.44 — Strength Progressive Overload
+# Forge V0.45 — Exercise Library + Workout Exercise Reordering
 
-Built on the confirmed-working V0.41 multi-profile baseline.
+Built on the confirmed-working V0.44 Strength Set Tick Fix / progressive overload baseline.
 
-## Strength progression
-- Double progression is available for Strength exercises only.
-- Built-in progressive strength exercises use centrally maintained defaults.
-- Custom Strength exercises can configure minimum reps, maximum reps, progression type and weight increment.
-- Progression targets are stored separately from actual completed workout results.
-- The first completed result establishes the next target when no prior progression state exists.
-- Successful targets increase reps within the configured range; reaching the maximum for every set increases weight and resets reps to the minimum.
-- Failed targets are held for another attempt. Manual weight changes are retained as the working weight rather than silently reverting.
-- Progression is isolated by profile and workout/exercise context.
-- Configuration changes use a configuration signature so old progression state does not override newly changed exercise settings.
+## Exercise library expansion
+- Added explicit barbell variants including Barbell Bench Press, Barbell Incline Bench Press, Barbell Overhead Press, Barbell Front Squat, Barbell RDL, Barbell Romanian Deadlift, Barbell Row, Barbell Bulgarian Split Squat, Barbell Reverse Lunge, Barbell Walking Lunge, Barbell Good Morning, Barbell Shrug, Barbell Curl and Close-Grip Bench Press.
+- Added additional dumbbell variants including DB RDL, DB Romanian Deadlift, DB Row, DB Incline Press, DB Bulgarian Split Squat, DB Reverse Lunge, DB Walking Lunge and DB Good Morning.
+- Added additional cable/core options including Cable Chest Press, Cable Lateral Raise, Cable Triceps Pushdown, Cable Curl, Plank, Dead Bug and Hanging Knee Raise.
+- New strength exercises have centrally defined progressive-overload defaults where appropriate.
+- Existing custom exercises and workout definitions are unchanged.
 
-## History and compatibility
-- Existing completed workout records are preserved.
-- Existing strength history can establish a baseline when sufficient completed reps/weight data exists.
-- Existing exercises without a progressive configuration remain non-progressive.
-- AMRAP, EMOM, Circuit, Run/Conditioning and Mobility behaviour is unchanged.
+## Workout exercise reordering
+- Added stable Up and Down controls to each exercise in the workout editor.
+- Moving an exercise changes its position in the workout immediately.
+- The saved workout order follows the editor order.
+- Up is unavailable logically at the top and Down at the bottom; no drag-and-drop dependency was introduced.
+- Reordering does not change exercise configuration, history, IDs or progression state.
+- Existing workouts are automatically compatible because their current array order is preserved.
 
 ## Versioning
-- Visible version: v0.44
-- Manifest: manifest_v0_42.json
-- Service worker: sw_v0_42.js
-- Cache: forge-v0.44
-
-
-V0.44 bug fix: restored the standard strength/normal workout tracking renderer removed during V0.42 progression integration, and added progression-target prefill to that renderer.
+- Visible version: v0.45
+- Manifest: manifest_v0_45.json
+- Service worker: sw_v0_45.js
+- Cache: forge-v0.45
