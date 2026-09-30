@@ -1,46 +1,33 @@
-# Forge V0.46 — Postpartum Workout Library & Mia's 12-Week Program
+# Forge V0.47 — True Grit Sydney 10 km Training Plan
 
-Built from the V0.45 source baseline. This release extends the existing Forge PWA rather than rebuilding it.
+Built from the V0.46 source. Existing multi-profile data, workout history, goals, progression state, mobility library, PWA behaviour and Mia's postpartum program are preserved.
 
-## Architecture preserved
-- Existing shared workout and exercise libraries remain intact.
-- Existing profile-specific goals, measurements, schedules, sessions and progression state remain in the V0.41 multi-profile structure.
-- Mitch's existing profile/history is not reset.
-- Mia is added as `profile_mia` with her own plan and schedule.
-- The 50 postpartum workouts are normal Forge workout definitions with additional optional metadata (`postpartum`, `category`, `tags`, `phase`, `description`, `warmup`, `intensity`, `scaling`, `safetyNote`, `equipment`).
-- Existing workout execution, timers and history continue to use the existing workout/session model.
+## Mitch — 20-week True Grit plan
+- Start: Monday 5 October 2026
+- End: Sunday 21 February 2027
+- Duration: 20 weeks
+- Frequency: 5 structured sessions/week
+- Goal event: True Grit Sydney 10 km, late February 2027
+- Focus: aerobic endurance, grip/pulling strength, carries, crawling/climbing strength, lower-body durability and run-to-obstacle conditioning.
+- Final two weeks reduce workload before race week.
 
-## Postpartum library
-50 workouts:
-- 10 Strength
-- 10 AMRAP
-- 10 EMOM
-- 10 Circuit
-- 10 Recovery / low-impact conditioning, core and mobility
+## New OCR exercise library
+Adds running intervals, trail/tempo/hill running, dead/towel hangs, scapular pull-ups, bear/low crawls, carry variations and box step-overs.
 
-All are 15–30 minutes and exclude running, jumping, skipping, burpees, high-impact plyometrics and maximal/heavy lifting from the library.
+## New True Grit workouts
+Includes base strength, strength + grip, grip/carry, run + grip, run + legs, hill/carry, crawl/climb, obstacle engine, 4 km/6 km/8 km race simulations and taper sessions.
 
-## Mia plan
-- Profile: Mia
-- Start: Monday 28 September 2026
-- End: Sunday 20 December 2026
-- 12 weeks
-- 4 structured sessions/week: Monday, Tuesday, Thursday, Friday
-- Wednesday/Saturday/Sunday are not scheduled by this program.
-- Weeks 1–4: Rebuild and reconnect
-- Weeks 5–8: Build strength and capacity
-- Weeks 9–12: Develop general fitness
+## Alphabetical ordering audit
+Alphabetical sorting is now enforced for the Exercise Library, Add Exercise picker, workout selection in the planner, workout filter types and profile selector. The Workouts library and Mobility exercise catalogs already sorted alphabetically and retain that behaviour.
 
-The plan references workout IDs/names rather than duplicating workout definitions.
+## Migration safety
+- `forgeTrueGritLibraryV1`
+- `forgeMitchTrueGritPlanV1`
 
-## Migration markers
-- `forgePostpartumLibraryV1`
-- `forgeMiaPostpartumPlanV1`
-
-The Mia schedule migration is idempotent after its first successful creation and does not overwrite later user edits to the plan.
+The new workout library and Mitch plan are seeded idempotently. Existing history is not reset. Existing schedule entries outside the 20-week plan are retained; program workout entries are added to the plan dates. Existing mobility selections on those dates are preserved.
 
 ## Versioning
-- Visible version: v0.46
-- Manifest: `manifest_v0_46.json`
-- Service worker: `sw_v0_46.js`
-- Cache: `forge-v0.46`
+- Visible version: v0.47
+- Manifest: `manifest_v0_47.json`
+- Service worker: `sw_v0_47.js`
+- Cache: `forge-v0.47`
