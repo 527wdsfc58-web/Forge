@@ -1,33 +1,30 @@
-# Forge V0.47 — True Grit Sydney 10 km Training Plan
+# Forge V0.48 — Progressive True Grit 10 km Plan
 
-Built from the V0.46 source. Existing multi-profile data, workout history, goals, progression state, mobility library, PWA behaviour and Mia's postpartum program are preserved.
+Built from V0.47 without resetting existing profiles, history, goals, progression, Mia's postpartum plan, or mobility schedules.
 
-## Mitch — 20-week True Grit plan
+## Mitch — 20-week True Grit program
 - Start: Monday 5 October 2026
 - End: Sunday 21 February 2027
-- Duration: 20 weeks
-- Frequency: 5 structured sessions/week
-- Goal event: True Grit Sydney 10 km, late February 2027
-- Focus: aerobic endurance, grip/pulling strength, carries, crawling/climbing strength, lower-body durability and run-to-obstacle conditioning.
-- Final two weeks reduce workload before race week.
+- Five sessions per week: Monday, Tuesday, Wednesday, Friday, Saturday
+- Thursday and Sunday remain available for rest/mobility
+- Progressive phases: Base, Build, OCR Specific, Race Specific, Peak, Taper
+- Recovery/deload weeks: 4, 8, 12 and 16
+- Long aerobic progression starts at 45 minutes, builds to 90 minutes, and tapers before race week
+- OCR sessions progressively increase grip, carries, crawling, climbing/pulling and running-under-fatigue demands
+- Race simulations progress from 4 km to 8 km
+- Strength sessions remain compatible with Forge's editable strength progression system
 
-## New OCR exercise library
-Adds running intervals, trail/tempo/hill running, dead/towel hangs, scapular pull-ups, bear/low crawls, carry variations and box step-overs.
+## Alphabetical ordering
+V0.47's programmatic alphabetical sorting remains in place for exercise/workout pickers and user-facing lists intended to be alphabetical.
 
-## New True Grit workouts
-Includes base strength, strength + grip, grip/carry, run + grip, run + legs, hill/carry, crawl/climb, obstacle engine, 4 km/6 km/8 km race simulations and taper sessions.
-
-## Alphabetical ordering audit
-Alphabetical sorting is now enforced for the Exercise Library, Add Exercise picker, workout selection in the planner, workout filter types and profile selector. The Workouts library and Mobility exercise catalogs already sorted alphabetically and retain that behaviour.
-
-## Migration safety
-- `forgeTrueGritLibraryV1`
-- `forgeMitchTrueGritPlanV1`
-
-The new workout library and Mitch plan are seeded idempotently. Existing history is not reset. Existing schedule entries outside the 20-week plan are retained; program workout entries are added to the plan dates. Existing mobility selections on those dates are preserved.
+## Migration
+- New workout marker: forgeTrueGritLibraryV2
+- New Mitch plan marker: forgeMitchTrueGritPlanV2
+- The V2 plan replaces the V0.47 True Grit schedule dates for Mitch while retaining mobility selections on those dates.
+- Other profiles are unchanged.
 
 ## Versioning
-- Visible version: v0.47
-- Manifest: `manifest_v0_47.json`
-- Service worker: `sw_v0_47.js`
-- Cache: `forge-v0.47`
+- Visible version: v0.48
+- Manifest: manifest_v0_48.json
+- Service worker: sw_v0_48.js
+- Cache: forge-v0.48
